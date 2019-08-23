@@ -25,6 +25,9 @@
     "type": "git",
     "url": "https://github.com/researchgate/react-structured-data.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "spire test",
     "lint": "spire lint",
