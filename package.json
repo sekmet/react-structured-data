@@ -1,10 +1,11 @@
 {
-  "name": "react-structured-data",
+  "name": "@researchgate/react-structured-data",
   "version": "0.0.14",
   "description": "Declarative JSON-LD Structured Data for ReactJS Apps",
   "author": "Ben Taylor <benlt105@gmail.com>",
   "private": false,
-  "homepage": "https://bentaylor2.github.io/react-structured-data/",
+  "main": "lib/js/index.js",
+  "module": "lib/es/index.js",
   "license": "MIT",
   "keywords": [
     "react",
@@ -22,64 +23,48 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bentaylor2/react-structured-data.git"
+    "url": "https://github.com/researchgate/react-structured-data.git"
+  },
+  "scripts": {
+    "test": "spire test",
+    "lint": "spire lint",
+    "format": "spire format",
+    "build": "yarn build:js && yarn build:es",
+    "build:js": "cross-env BABEL_ENV=production BABEL_OUTPUT=cjs babel src --out-dir lib/js --ignore __tests__ --copy-files",
+    "build:es": "cross-env BABEL_ENV=production BABEL_OUTPUT=esm babel src --out-dir lib/es --ignore __tests__ --copy-files",
+    "prepublishOnly": "yarn build",
+    "release": "spire release"
   },
   "dependencies": {
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "autoprefixer": "7.1.6",
-    "babel-cli": "^6.14.0",
-    "babel-core": "6.26.0",
-    "babel-eslint": "7.2.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-class-properties": "6.11.5",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-object-assign": "^6.8.0",
-    "babel-preset-minify": "^0.4.3",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-react-app": "^3.1.0",
-    "babel-preset-stage-2": "^6.13.0",
-    "babel-runtime": "6.26.0",
-    "css-loader": "0.28.7",
-    "eslint": "^4.18.2",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.7.2",
-    "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-loader": "2.0.8",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dev-utils": "^4.2.1",
-    "react-dom": "^16.2.0",
-    "react-structured-data": "^0.0.8",
-    "sass-loader": "^6.0.6",
-    "style-loader": "0.19.0",
-    "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^3.0.2",
-    "webpack-dev-server": "^3.1.4"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@researchgate/babel-preset": "^1.2.1",
+    "@researchgate/spire-config": "^1.3.1",
+    "cross-env": "^5.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "spire": "^1.7.2",
+    "spire-plugin-semantic-release": "^1.7.2"
   },
   "peerDependencies": {
     "react": "^16.2.0"
   },
-  "scripts": {
-    "start": "BABEL_ENV=development webpack-dev-server --mode development --open --hot",
-    "build": "BABEL_ENV=production babel src/core --plugins transform-object-assign,transform-class-properties,transform-es2015-modules-commonjs --presets babel-preset-stage-2,babel-preset-react-app --out-dir dist"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
+  "spire": {
+    "extends": [
+      [
+        "@researchgate/spire-config",
+        {
+          "eslint": "react"
+        }
+      ]
     ],
     "plugins": [
-      "babel-plugin-syntax-trailing-function-commas",
-      "babel-plugin-transform-class-properties",
-      "babel-plugin-transform-object-rest-spread",
-      "babel-plugin-transform-react-constant-elements"
+      "spire-plugin-semantic-release"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "main": "./dist"
+  }
 }

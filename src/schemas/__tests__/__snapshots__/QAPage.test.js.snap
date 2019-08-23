@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QAPage renders question to QAPage mainEntity as Question 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"QAPage","url":"http://example.com/qa-page","mainEntity":{"@type":"Question","name":"title","answerCount":5,"text":"question text","dateCreated":"2019-05-01","author":{"@type":"Person","mainEntityOfPage":"http://example.com/author2","name":"Author of a question"},"acceptedAnswer":{"@type":"Answer","dateCreated":"2019-08-15","text":"test accepted answer","upvoteCount":20,"url":"http://example.com/answer1","author":{"@type":"Person","mainEntityOfPage":"http://example.com/author1","name":"Author of an accepted answer","memberOf":{"@type":"Organization","name":"answer, without collection"}}},"suggestedAnswer":[{"@type":"Answer","text":"some text","url":"http://example.com/answer2","dateCreated":"2019-04-11","upvoteCount":0,"author":{"@type":"Person","mainEntityOfPage":"http://example.com/author3","name":"another authot"}},{"@type":"Answer","text":"answer with multiple authors","url":"http://example.com/answer3","dateCreated":"2019-04-01","upvoteCount":1,"author":[{"@type":"Person","mainEntityOfPage":"http://example.com/author3","name":"Author 1 of a second suggested answer"},{"@type":"Person","mainEntityOfPage":"http://example.com/author4","name":"Author 2 of a second suggested answer","memberOf":{"@type":"Organization","name":"in collection"}}]}]}}
+</script>
+`;

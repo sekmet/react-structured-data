@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article example renders article with image 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Article","mainEntityOfPage":"institution/ResearchGate/post/Free_eBook-Evolution_and_Application_of_3D_Cell_Culture_and_Analysis","image":"https://example.org/article_image.jpeg","headline":"Free eBook - Evolution and Application of 3D Cell Culture and Analysis","datePublished":"","dateModified":"","publisher":{"@type":"Organization","url":"https://example.org/institution/ResearchGate","name":"ResearchGate","location":{"@type":"Place","name":"Berlin, Germany"},"logo":{"@type":"ImageObject","url":"https://example.org/ii/institution.image/image_url.jpeg"}},"author":{"@type":"Organization","name":"ResearchGate"}}
+</script>
+`;
