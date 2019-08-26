@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GenerticNode filters out null and false child nodes 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome","reviewBody":"This is great!","itemReviewed":{"@type":"Product","@id":"product-x"},"locationCreated":{"@type":"AdministrativeArea","name":"Chicago, IL"}}
+</script>
+`;
+
 exports[`GenerticNode renders question to QAPage mainEntity as Question type 1`] = `
 <script
   type="application/ld+json"

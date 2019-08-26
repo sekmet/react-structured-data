@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenerticNodeCollection filters out null and false nodes from a collection 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","undefined":[{"author":{"@type":"Person","name":"Cool Carl"}},{"@type":"AdministrativeArea","name":"Chicago, IL"}]}
+</script>
+`;

@@ -11,7 +11,7 @@ class JSONLDAbstractNode extends React.Component {
   };
 
   getChildJSON(child) {
-    if (!child) return "";
+    if (!child) return null;
 
     const ChildClass = child.type;
     const { children, type, id, ...schema } = child.props;
@@ -34,7 +34,10 @@ class JSONLDAbstractNode extends React.Component {
      * If a component has multiple children, this.props.children is an array of Child objects.
      */
     if (this.props.children.length > 0) {
-      return this.props.children.map(child => this.getChildJSON(child));
+      // Children that are null will get filtered out
+      return this.props.children
+        .map(child => this.getChildJSON(child))
+        .filter(child => child);
     }
     return [this.getChildJSON(this.props.children)];
   }

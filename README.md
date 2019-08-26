@@ -26,11 +26,11 @@ at http://schema.org/.
 
 ### Yarn
 
-`yarn add react-structured-data`
+`yarn add @researchgate/react-structured-data`
 
 ### NPM
 
-`npm install react-structured-data --save`
+`npm install @researchgate/react-structured-data --save`
 
 ## Code Example
 

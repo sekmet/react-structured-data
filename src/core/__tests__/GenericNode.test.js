@@ -30,4 +30,31 @@ describe("GenerticNode", () => {
       )
     ).toMatchSnapshot();
   });
+  it("filters out null and false child nodes", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="It is awesome"
+            reviewBody="This is great!"
+          >
+            <GenericNode
+              type="itemReviewed"
+              jsonldtype="Product"
+              id="product-x"
+            />
+            {null}
+            {false}
+            <GenericNode
+              type="locationCreated"
+              jsonldtype="AdministrativeArea"
+              name="Chicago, IL"
+            />
+          </GenericNode>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
 });
