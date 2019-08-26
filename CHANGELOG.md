@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/researchgate/react-structured-data/compare/v1.0.5...v1.0.6) (2019-08-26)
+
+
+### Bug Fixes
+
+* empty collections will render to `null` ([6bc868d](https://github.com/researchgate/react-structured-data/commit/6bc868d))
+
 ## [1.0.5](https://github.com/researchgate/react-structured-data/compare/v1.0.4...v1.0.5) (2019-08-26)
 
 
