@@ -8,6 +8,14 @@ exports[`GenerticNode filters out null and false child nodes 1`] = `
 </script>
 `;
 
+exports[`GenerticNode filters out properties that have null values 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
+</script>
+`;
+
 exports[`GenerticNode renders question to QAPage mainEntity as Question type 1`] = `
 <script
   type="application/ld+json"

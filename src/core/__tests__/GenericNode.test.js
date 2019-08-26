@@ -57,4 +57,18 @@ describe("GenerticNode", () => {
       )
     ).toMatchSnapshot();
   });
+  it("filters out properties that have null values", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="It is awesome"
+            reviewBody={null}
+          />
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
 });

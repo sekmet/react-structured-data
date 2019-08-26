@@ -23,6 +23,7 @@ describe("QAPage", () => {
               answerCount={5}
               text="question text"
               dateCreated="2019-05-01"
+              dateModified={null}
             >
               <Person
                 type="author"
