@@ -9,11 +9,22 @@ describe("GenerticNodeCollection", () => {
     expect(
       renderer.create(
         <JSONLD>
-          <GenericNodeCollection>
-            <GenericNode type="author" jsonldtype="Person" name="Cool Carl" />
+          <GenericNodeCollection type="author">
+            <GenericNode jsonldtype="Person" name="Cool Carl" />
             {false}
             {null}
-            <GenericNode jsonldtype="AdministrativeArea" name="Chicago, IL" />
+            <GenericNode jsonldtype="Person" name="Brave Mark" />
+          </GenericNodeCollection>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
+  it("filters renders GenericNode with null as type", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNodeCollection type="author">
+            <GenericNode type={null} jsonldtype="Person" name="Cool Carl" />
           </GenericNodeCollection>
         </JSONLD>
       )

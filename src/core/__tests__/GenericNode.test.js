@@ -71,4 +71,36 @@ describe("GenerticNode", () => {
       )
     ).toMatchSnapshot();
   });
+  it("filters out one child which is null", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="It is awesome"
+            reviewBody={null}
+          >
+            {null}
+          </GenericNode>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
+  it("filters out one child which is false", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="It is awesome"
+            reviewBody={null}
+          >
+            {false}
+          </GenericNode>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
 });

@@ -1,4 +1,5 @@
 import JSONLDAbstractNode from "../JSONLDAbstractNode";
+import T from "prop-types";
 
 class GenericNodeCollection extends JSONLDAbstractNode {
   getJSON() {
@@ -8,5 +9,9 @@ class GenericNodeCollection extends JSONLDAbstractNode {
     return null;
   }
 }
+
+GenericNodeCollection.propTypes = {
+  type: T.string.isRequired
+};
 
 export default GenericNodeCollection;

@@ -4,6 +4,14 @@ exports[`GenerticNodeCollection filters out null and false nodes from a collecti
 <script
   type="application/ld+json"
 >
-  {"@context":"https://schema.org/","undefined":[{"author":{"@type":"Person","name":"Cool Carl"}},{"@type":"AdministrativeArea","name":"Chicago, IL"}]}
+  {"@context":"https://schema.org/","author":[{"@type":"Person","name":"Cool Carl"},{"@type":"Person","name":"Brave Mark"}]}
+</script>
+`;
+
+exports[`GenerticNodeCollection filters renders GenericNode with null as type 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","author":[{"@type":"Person","name":"Cool Carl"}]}
 </script>
 `;

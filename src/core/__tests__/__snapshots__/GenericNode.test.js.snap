@@ -8,6 +8,22 @@ exports[`GenerticNode filters out null and false child nodes 1`] = `
 </script>
 `;
 
+exports[`GenerticNode filters out one child which is false 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
+</script>
+`;
+
+exports[`GenerticNode filters out one child which is null 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
+</script>
+`;
+
 exports[`GenerticNode filters out properties that have null values 1`] = `
 <script
   type="application/ld+json"
