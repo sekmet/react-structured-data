@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/researchgate/react-structured-data/compare/v1.0.2...v1.0.3) (2019-08-26)
+
+
+### Bug Fixes
+
+* added .npmrc to gitignore ([daf5fb4](https://github.com/researchgate/react-structured-data/commit/daf5fb4))
+
 ## [1.0.2](https://github.com/researchgate/react-structured-data/compare/v1.0.1...v1.0.2) (2019-08-26)
 
 ### Bug Fixes
