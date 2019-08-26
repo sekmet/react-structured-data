@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/researchgate/react-structured-data/compare/v1.0.3...v1.0.4) (2019-08-26)
+
+
+### Bug Fixes
+
+* filtering of null and [secure] nodes from a collection ([a9213fc](https://github.com/researchgate/react-structured-data/commit/a9213fc))
+
 ## [1.0.3](https://github.com/researchgate/react-structured-data/compare/v1.0.2...v1.0.3) (2019-08-26)
 
 
