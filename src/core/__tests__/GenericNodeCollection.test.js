@@ -30,4 +30,34 @@ describe("GenerticNodeCollection", () => {
       )
     ).toMatchSnapshot();
   });
+  it("do not render empty collection", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="With empty collection"
+          >
+            <GenericNodeCollection type="author" />
+          </GenericNode>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
+  it("do not render collection of empty array in it", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            name="With collection of empty array in it"
+          >
+            <GenericNodeCollection type="author">{[]}</GenericNodeCollection>
+          </GenericNode>
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
 });

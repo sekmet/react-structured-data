@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GenerticNodeCollection do not render collection of empty array in it 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"With collection of empty array in it","author":null}
+</script>
+`;
+
+exports[`GenerticNodeCollection do not render empty collection 1`] = `
+<script
+  type="application/ld+json"
+>
+  {"@context":"https://schema.org/","@type":"Review","name":"With empty collection","author":null}
+</script>
+`;
+
 exports[`GenerticNodeCollection filters out null and false nodes from a collection 1`] = `
 <script
   type="application/ld+json"
