@@ -1,41 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GenerticNode escapes javascript xss 1`] = `
+<script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"reviewBody\\":\\"\\\\\\\\&#x22;;alert(&#x27;XSS&#x27;);//\\"}",
+    }
+  }
+  type="application/ld+json"
+/>
+`;
+
+exports[`GenerticNode escapes json xss 1`] = `
+<script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"reviewBody\\":\\"&#x3C;/script&#x3E;&#x3C;script&#x3E;alert(&#x27;XSS&#x27;);&#x3C;/script&#x3E;\\"}",
+    }
+  }
+  type="application/ld+json"
+/>
+`;
+
 exports[`GenerticNode filters out null and false child nodes 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"It is awesome\\",\\"reviewBody\\":\\"This is great!\\",\\"itemReviewed\\":{\\"@type\\":\\"Product\\",\\"@id\\":\\"product-x\\"},\\"locationCreated\\":{\\"@type\\":\\"AdministrativeArea\\",\\"name\\":\\"Chicago, IL\\"}}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome","reviewBody":"This is great!","itemReviewed":{"@type":"Product","@id":"product-x"},"locationCreated":{"@type":"AdministrativeArea","name":"Chicago, IL"}}
-</script>
+/>
 `;
 
 exports[`GenerticNode filters out one child which is false 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"It is awesome\\"}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
-</script>
+/>
 `;
 
 exports[`GenerticNode filters out one child which is null 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"It is awesome\\"}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
-</script>
+/>
 `;
 
 exports[`GenerticNode filters out properties that have null values 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"It is awesome\\"}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome"}
-</script>
+/>
 `;
 
 exports[`GenerticNode renders question to QAPage mainEntity as Question type 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"It is awesome\\",\\"reviewBody\\":\\"This is great!\\",\\"itemReviewed\\":{\\"@type\\":\\"Product\\",\\"@id\\":\\"product-x\\"},\\"author\\":{\\"@type\\":\\"Person\\",\\"name\\":\\"Cool Carl\\"},\\"locationCreated\\":{\\"@type\\":\\"AdministrativeArea\\",\\"name\\":\\"Chicago, IL\\"}}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"It is awesome","reviewBody":"This is great!","itemReviewed":{"@type":"Product","@id":"product-x"},"author":{"@type":"Person","name":"Cool Carl"},"locationCreated":{"@type":"AdministrativeArea","name":"Chicago, IL"}}
-</script>
+/>
 `;
