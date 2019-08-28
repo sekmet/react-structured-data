@@ -2,16 +2,22 @@
 
 exports[`Organization example renders Organization with department 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Organization\\",\\"url\\":\\"https://example.org/institution/ResearchGate\\",\\"name\\":\\"ResearchGate\\",\\"location\\":{\\"@type\\":\\"Place\\",\\"name\\":\\"Berlin, Germany\\"},\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"url\\":\\"https://example.org/ii/institution.image/image_url.jpeg\\"},\\"department\\":{\\"@type\\":\\"Organization\\",\\"url\\":\\"https://example.org/institution/ResearchGate/department/Engineering\\",\\"name\\":\\"Engineering\\"}}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Organization","url":"https://example.org/institution/ResearchGate","name":"ResearchGate","location":{"@type":"Place","name":"Berlin, Germany"},"logo":{"@type":"ImageObject","url":"https://example.org/ii/institution.image/image_url.jpeg"},"department":{"@type":"Organization","url":"https://example.org/institution/ResearchGate/department/Engineering","name":"Engineering"}}
-</script>
+/>
 `;
 
 exports[`Organization example renders Organization with logo image 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Organization\\",\\"url\\":\\"https://example.org/institution/ResearchGate\\",\\"name\\":\\"ResearchGate\\",\\"location\\":{\\"@type\\":\\"Place\\",\\"name\\":\\"Berlin, Germany\\"},\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"url\\":\\"https://example.org/ii/institution.image/image_url.jpeg\\"}}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Organization","url":"https://example.org/institution/ResearchGate","name":"ResearchGate","location":{"@type":"Place","name":"Berlin, Germany"},"logo":{"@type":"ImageObject","url":"https://example.org/ii/institution.image/image_url.jpeg"}}
-</script>
+/>
 `;

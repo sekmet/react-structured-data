@@ -103,4 +103,30 @@ describe("GenerticNode", () => {
       )
     ).toMatchSnapshot();
   });
+  it("escapes json xss", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            reviewBody={`</script><script>alert('XSS');</script>`}
+          />
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
+  it("escapes javascript xss", () => {
+    expect(
+      renderer.create(
+        <JSONLD>
+          <GenericNode
+            type="review"
+            jsonldtype="Review"
+            reviewBody={`\\";alert('XSS');//`}
+          />
+        </JSONLD>
+      )
+    ).toMatchSnapshot();
+  });
 });

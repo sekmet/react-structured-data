@@ -2,32 +2,44 @@
 
 exports[`GenerticNodeCollection do not render collection of empty array in it 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"With collection of empty array in it\\",\\"author\\":null}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"With collection of empty array in it","author":null}
-</script>
+/>
 `;
 
 exports[`GenerticNodeCollection do not render empty collection 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@type\\":\\"Review\\",\\"name\\":\\"With empty collection\\",\\"author\\":null}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@type":"Review","name":"With empty collection","author":null}
-</script>
+/>
 `;
 
 exports[`GenerticNodeCollection filters out null and false nodes from a collection 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"Cool Carl\\"},{\\"@type\\":\\"Person\\",\\"name\\":\\"Brave Mark\\"}]}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","author":[{"@type":"Person","name":"Cool Carl"},{"@type":"Person","name":"Brave Mark"}]}
-</script>
+/>
 `;
 
 exports[`GenerticNodeCollection filters renders GenericNode with null as type 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"Cool Carl\\"}]}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","author":[{"@type":"Person","name":"Cool Carl"}]}
-</script>
+/>
 `;

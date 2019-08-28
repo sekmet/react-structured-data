@@ -2,8 +2,11 @@
 
 exports[`Review Page renders reviews in graph 1`] = `
 <script
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "{\\"@context\\":\\"https://schema.org/\\",\\"@graph\\":[{\\"@type\\":\\"Review\\",\\"name\\":\\"It&#x27;s awesome\\",\\"reviewBody\\":\\"This is Great! My family loves it\\",\\"datePublished\\":\\"11/22/1963\\",\\"author\\":{\\"@type\\":\\"Person\\",\\"name\\":\\"Jerry\\"},\\"locationCreated\\":{\\"@type\\":\\"AdministrativeArea\\",\\"name\\":\\"Chicago, IL\\"},\\"reviewRating\\":{\\"@type\\":\\"Rating\\",\\"ratingValue\\":5},\\"itemReviewed\\":{\\"@type\\":\\"Product\\",\\"name\\":\\"Product Name\\",\\"@id\\":\\"product-x\\"}},{\\"@type\\":\\"Review\\",\\"name\\":\\"Very cool\\",\\"reviewBody\\":\\"I like this a lot. Very cool product\\",\\"datePublished\\":\\"11/22/1963\\",\\"author\\":{\\"@type\\":\\"Person\\",\\"name\\":\\"Cool Carl\\"},\\"locationCreated\\":{\\"@type\\":\\"AdministrativeArea\\",\\"name\\":\\"Chicago, IL\\"},\\"reviewRating\\":{\\"@type\\":\\"Rating\\",\\"ratingValue\\":4},\\"itemReviewed\\":{\\"@type\\":\\"Product\\",\\"name\\":\\"Product Name\\",\\"@id\\":\\"product-x\\"}}]}",
+    }
+  }
   type="application/ld+json"
->
-  {"@context":"https://schema.org/","@graph":[{"@type":"Review","name":"It's awesome","reviewBody":"This is Great! My family loves it","datePublished":"11/22/1963","author":{"@type":"Person","name":"Jerry"},"locationCreated":{"@type":"AdministrativeArea","name":"Chicago, IL"},"reviewRating":{"@type":"Rating","ratingValue":5},"itemReviewed":{"@type":"Product","name":"Product Name","@id":"product-x"}},{"@type":"Review","name":"Very cool","reviewBody":"I like this a lot. Very cool product","datePublished":"11/22/1963","author":{"@type":"Person","name":"Cool Carl"},"locationCreated":{"@type":"AdministrativeArea","name":"Chicago, IL"},"reviewRating":{"@type":"Rating","ratingValue":4},"itemReviewed":{"@type":"Product","name":"Product Name","@id":"product-x"}}]}
-</script>
+/>
 `;

@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/researchgate/react-structured-data/compare/v1.0.6...v1.1.0) (2019-08-27)
+
+
+### Features
+
+* dangerouslySetInnerHTML property is removed. All the string props will get encoded and dangerouslySetInnerHTML will be used ([19da0b8](https://github.com/researchgate/react-structured-data/commit/19da0b8))
+
 ## [1.0.6](https://github.com/researchgate/react-structured-data/compare/v1.0.5...v1.0.6) (2019-08-26)
 
 

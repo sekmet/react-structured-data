@@ -131,18 +131,11 @@ will add the following to your markup (will be minified):
 | jsonldtype | String        | The value of the @type description in the json-ld body: `"@type": "Product"`                                                   |
 | schema     | Object (json) | This should be the schema that you want for your structured data node: `{name: "It is awesome", reviewBody: "This is great!"}` |
 
-#### JSONLD node propTypes
-
-| PropType              | Value   | Description                                                                   |
-| --------------------- | ------- | ----------------------------------------------------------------------------- |
-| dangerouslyExposeHtml | Boolean | Set this to render the json within script tag using `dangerouslySetInnerHTML` |
-
 #### Schema node PropTypes
 
-| PropType | Value  | Description                                                                                        |
-| -------- | ------ | -------------------------------------------------------------------------------------------------- |
-| parentID | String | Sets the id of the schema that becomes a reference that the children point to `"@id": "product-x"` |
-| id       | String | similar to parentID but uses the ID on itself                                                      |
+| PropType | Value  | Description                                   |
+| -------- | ------ | --------------------------------------------- |
+| id       | String | similar to parentID but uses the ID on itself |
 
 ### Preset Components
 

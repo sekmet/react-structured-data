@@ -1,6 +1,6 @@
 {
   "name": "@researchgate/react-structured-data",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Declarative JSON-LD Structured Data for ReactJS Apps",
   "author": "Ben Taylor <benlt105@gmail.com>",
   "private": false,
@@ -39,6 +39,7 @@
     "release": "spire release"
   },
   "dependencies": {
+    "he": "^1.2.0",
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
